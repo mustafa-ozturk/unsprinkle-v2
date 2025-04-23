@@ -13,8 +13,9 @@ const Hero = () => {
             ${src.replace(".jpg", "@2x.avif")},
             ${src.replace(".jpg", "@3x.jpg")},
             ${src.replace(".jpg", "@3x.avif")}`}
+        alt="An example of the photos distributed on the site (A cat staring at you_."
       />
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
