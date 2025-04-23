@@ -1,10 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Hero = () => {
+  const src = "/images/hero-img.jpg";
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
+      <HeroImage
+        src={src}
+        srcSet={`
+            ${src.replace(".jpg", ".avif")}, 
+            ${src.replace(".jpg", "@2x.jpeg")},
+            ${src.replace(".jpg", "@2x.avif")},
+            ${src.replace(".jpg", "@3x.jpg")},
+            ${src.replace(".jpg", "@3x.avif")}`}
+      />
       <Swoop src="/swoop.svg" />
     </Wrapper>
   );
